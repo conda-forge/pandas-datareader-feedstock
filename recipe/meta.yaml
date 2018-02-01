@@ -1,8 +1,8 @@
 {%set name = "pandas-datareader" %}
-{%set version = "0.5.0" %}
+{%set version = "0.6.0" %}
 {%set compress_type = "tar.gz" %}
 {%set hash_type = "sha256" %}
-{%set hash_val = "7523ca480c258cf4335869ba72e201807f2f3a8f4395efad5508a269efff18c9" %}
+{%set hash_val = "14f4c64b34100d60753fcf04b4681322da4625d48e90efcd862a93aeacbc3118" %}
 {%set build_num = "0" %}
 
 package:
@@ -50,3 +50,4 @@ extra:
     - femtotrader
     - jreback
     - davidastephens
+    - bashtage
