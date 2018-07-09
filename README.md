@@ -14,14 +14,15 @@ Summary: Up to date remote data access for pandas, works for multiple versions o
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/pandas-datareader-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/pandas-datareader-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/pandas-datareader-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/pandas-datareader-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/pandas-datareader-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/pandas-datareader-feedstock/branch/master)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/pandas-datareader-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/pandas-datareader-feedstock)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pandas-datareader/badges/version.svg)](https://anaconda.org/conda-forge/pandas-datareader)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pandas-datareader/badges/downloads.svg)](https://anaconda.org/conda-forge/pandas-datareader)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-pandas--datareader-green.svg)](https://anaconda.org/conda-forge/pandas-datareader) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pandas-datareader.svg)](https://anaconda.org/conda-forge/pandas-datareader) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pandas-datareader.svg)](https://anaconda.org/conda-forge/pandas-datareader) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pandas-datareader.svg)](https://anaconda.org/conda-forge/pandas-datareader) |
 
 Installing pandas-datareader
 ============================
