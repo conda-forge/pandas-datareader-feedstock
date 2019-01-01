@@ -1,6 +1,8 @@
 About pandas-datareader
 =======================
 
+[![Powered by NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](http://numfocus.org)
+
 Home: https://github.com/pydata/pandas-datareader
 
 Package license: BSD-3
@@ -14,9 +16,8 @@ Summary: Up to date remote data access for pandas, works for multiple versions o
 Current build status
 ====================
 
-[![Linux](https://img.shields.io/circleci/project/github/conda-forge/pandas-datareader-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/pandas-datareader-feedstock)
-[![OSX](https://img.shields.io/travis/conda-forge/pandas-datareader-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/pandas-datareader-feedstock)
-[![Windows](https://img.shields.io/appveyor/ci/conda-forge/pandas-datareader-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/pandas-datareader-feedstock/branch/master)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/pandas-datareader-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/pandas-datareader-feedstock)
 
 Current release info
 ====================
@@ -104,3 +105,13 @@ In order to produce a uniquely identifiable distribution:
  * If the version of a package **is** being increased, please remember to return
    the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string)
    back to 0.
+
+Feedstock Maintainers
+=====================
+
+* [@bashtage](https://github.com/bashtage/)
+* [@davidastephens](https://github.com/davidastephens/)
+* [@femtotrader](https://github.com/femtotrader/)
+* [@jreback](https://github.com/jreback/)
+* [@mariusvniekerk](https://github.com/mariusvniekerk/)
+
