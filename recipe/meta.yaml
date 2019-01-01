@@ -16,6 +16,7 @@ source:
 
 build:
   number: {{ build_num }}
+  noarch: python
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
