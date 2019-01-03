@@ -1,8 +1,8 @@
 {%set name = "pandas-datareader" %}
-{%set version = "0.6.0" %}
+{%set version = "0.7.0" %}
 {%set compress_type = "tar.gz" %}
 {%set hash_type = "sha256" %}
-{%set hash_val = "47681336a3f6e6953b024bd73f8bb005f36e8df831ccce336e9fc601c587e3db" %}
+{%set hash_val = "7dee3fe6fa483c8c2ee4f1af91a65b542c5446d75a6fc25c832cad1ffca8ef0b" %}
 {%set build_num = "0" %}
 
 package:
@@ -28,8 +28,6 @@ requirements:
     - python
     - pandas
     - requests >=2.3.0
-    - requests-file
-    - requests-ftp
 
 test:
   imports:
@@ -40,7 +38,7 @@ about:
   license: BSD-3
   license_file: LICENSE.md
   license_family: BSD
-  summary: 'Up to date remote data access for pandas, works for multiple versions of pandas'
+  summary: 'Extract data from a wide range of Internet sources into a pandas DataFrame.'
   dev_url: https://github.com/pydata/pandas-datareader
   doc_url: https://pandas-datareader.readthedocs.io/en/latest/
 
