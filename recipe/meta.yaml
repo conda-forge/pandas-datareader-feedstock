@@ -1,9 +1,9 @@
-{%set name = "pandas-datareader" %}
-{%set version = "0.7.0" %}
-{%set compress_type = "tar.gz" %}
-{%set hash_type = "sha256" %}
-{%set hash_val = "7dee3fe6fa483c8c2ee4f1af91a65b542c5446d75a6fc25c832cad1ffca8ef0b" %}
-{%set build_num = "0" %}
+{% set name = "pandas-datareader" %}
+{% set version = "0.7.0" %}
+{% set compress_type = "tar.gz" %}
+{% set hash_type = "sha256" %}
+{% set hash_val = "7dee3fe6fa483c8c2ee4f1af91a65b542c5446d75a6fc25c832cad1ffca8ef0b" %}
+{% set build_num = "0" %}
 
 package:
   name: {{ name|lower }}
@@ -15,14 +15,14 @@ source:
   {{ hash_type }}: {{ hash_val }}
 
 build:
+  noarch: python
   number: {{ build_num }}
-  script: python setup.py install --single-version-externally-managed --record=record.txt
-
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
-  build:
+  host:
     - python
-    - setuptools
+    - pip
 
   run:
     - python
