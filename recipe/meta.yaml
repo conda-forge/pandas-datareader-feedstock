@@ -28,6 +28,8 @@ requirements:
     - python
     - pandas
     - requests >=2.3.0
+    - wrapt
+    - lxml
 
 test:
   imports:
