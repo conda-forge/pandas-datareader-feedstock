@@ -1,8 +1,8 @@
 {%set name = "pandas-datareader" %}
-{%set version = "0.6.0" %}
+{% set version = "0.7.3" %}
 {%set compress_type = "tar.gz" %}
 {%set hash_type = "sha256" %}
-{%set hash_val = "47681336a3f6e6953b024bd73f8bb005f36e8df831ccce336e9fc601c587e3db" %}
+{% set hash_val = "1af93580affab08023dae6cbf858c9f306316da58ce19b33a1e750b5851af1ee" %}
 {%set build_num = "0" %}
 
 package:
