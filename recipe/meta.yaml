@@ -1,35 +1,28 @@
-{%set name = "pandas-datareader" %}
-{%set version = "0.6.0" %}
-{%set compress_type = "tar.gz" %}
-{%set hash_type = "sha256" %}
-{%set hash_val = "47681336a3f6e6953b024bd73f8bb005f36e8df831ccce336e9fc601c587e3db" %}
-{%set build_num = "0" %}
+{%set version = "0.8.1" %}
 
 package:
-  name: {{ name|lower }}
+  name: pandas-datareader
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.{{ compress_type }}
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ compress_type }}
-  {{ hash_type }}: {{ hash_val }}
+  url: https://pypi.io/packages/source/p/pandas-datareader/pandas-datareader-{{ version }}.tar.gz
+  sha256: b8766b166c84b5e103e1ac57677e8c48084b66c4e477c1d0d437ec4b759c7a92
 
 build:
-  number: {{ build_num }}
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  number: 0
+  noarch: python
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 
 requirements:
   build:
     - python
-    - setuptools
-
+    - pip
   run:
     - python
-    - pandas
+    - lxml
+    - pandas >=0.21
     - requests >=2.3.0
-    - requests-file
-    - requests-ftp
 
 test:
   imports:
@@ -37,7 +30,7 @@ test:
 
 about:
   home: https://github.com/pydata/pandas-datareader
-  license: BSD-3
+  license: BSD-3-Clause
   license_file: LICENSE.md
   license_family: BSD
   summary: 'Up to date remote data access for pandas, works for multiple versions of pandas'
