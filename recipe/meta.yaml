@@ -1,4 +1,4 @@
-{% set version = "0.8.1" %}
+{% set version = "0.9.0" %}
 
 package:
   name: pandas-datareader
@@ -6,23 +6,24 @@ package:
 
 source:
   url: https://pypi.io/packages/source/p/pandas-datareader/pandas-datareader-{{ version }}.tar.gz
-  sha256: b8766b166c84b5e103e1ac57677e8c48084b66c4e477c1d0d437ec4b759c7a92
+  sha256: b2cbc1e16a6ab9ff1ed167ae2ea92839beab9a20823bd00bdfb78155fa04f891
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 
 requirements:
-  build:
-    - python
+  host:
+    - python >=3.6
     - pip
   run:
     - python
     - lxml
     - pandas >=0.21
     - requests >=2.3.0
+    - python >=3.6
 
 test:
   imports:
@@ -33,7 +34,7 @@ about:
   license: BSD-3-Clause
   license_file: LICENSE.md
   license_family: BSD
-  summary: 'Up to date remote data access for pandas, works for multiple versions of pandas'
+  summary: Up to date remote data access for pandas, works for multiple versions of pandas
   dev_url: https://github.com/pydata/pandas-datareader
   doc_url: https://pandas-datareader.readthedocs.io/en/latest/
 
