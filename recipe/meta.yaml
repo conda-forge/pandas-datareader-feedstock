@@ -21,7 +21,7 @@ requirements:
   run:
     - python
     - lxml
-    - pandas >=0.21
+    - pandas >=1.0
     - requests >=2.3.0
     - python >=3.6
 
