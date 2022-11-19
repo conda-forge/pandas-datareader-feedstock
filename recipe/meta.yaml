@@ -9,10 +9,9 @@ source:
   sha256: 9fc3c63d39bc0c10c2683f1c6d503ff625020383e38f6cbe14134826b454d5a6
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
-
 
 requirements:
   host:
@@ -28,6 +27,17 @@ requirements:
 test:
   imports:
     - pandas_datareader
+
+outputs:
+   - name: pandas-datareader
+   - name: pandas_datareader
+     build:
+       noarch: python
+     requirements:
+       host:
+         - python
+       run:
+         - {{ pin_subpackage( "pandas-datareader", exact=True) }}
 
 about:
   home: https://github.com/pydata/pandas-datareader
