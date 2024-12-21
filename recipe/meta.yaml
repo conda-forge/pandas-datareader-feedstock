@@ -5,27 +5,29 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/p/pandas-datareader/pandas-datareader-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/p/pandas-datareader/pandas-datareader-{{ version }}.tar.gz
   sha256: 9fc3c63d39bc0c10c2683f1c6d503ff625020383e38f6cbe14134826b454d5a6
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
   run:
-    - python
+    - python >={{ python_min }}
     - lxml
     - pandas >=1.0
     - requests >=2.3.0
-    - python >=3.6
+    - python >={{ python_min }}
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - pandas_datareader
 
