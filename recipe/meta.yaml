@@ -16,14 +16,13 @@ build:
 
 requirements:
   host:
-    - python {{ python_min }}
+    - python >=3.11
     - pip
   run:
-    - python >={{ python_min }}
+    - python >=3.11
     - lxml
-    - pandas >=1.0
+    - pandas >=2.1.4
     - requests >=2.3.0
-    - python >={{ python_min }}
 
 test:
   requires:
