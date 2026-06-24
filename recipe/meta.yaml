@@ -1,29 +1,31 @@
-{% set version = "0.10.0" %}
+{% set version = "0.11.0" %}
+{% set python_min = "3.11" %}
 
 package:
   name: pandas-datareader
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/p/pandas-datareader/pandas-datareader-{{ version }}.tar.gz
-  sha256: 9fc3c63d39bc0c10c2683f1c6d503ff625020383e38f6cbe14134826b454d5a6
+  url: https://pypi.org/packages/source/p/pandas-datareader/pandas_datareader-{{ version }}.tar.gz
+  sha256: 6c86360127f0b4c4451495574e162da058cf6154a185503310df70c417e0e266
 
 build:
-  number: 1
+  number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
-
-
+  script: python -m pip install . -vv
+  
 requirements:
   host:
     - python {{ python_min }}
     - pip
+    - setuptools
+    - setuptools_scm >=8.0.0,<9
+    - wheel
   run:
     - python >={{ python_min }}
     - lxml
-    - pandas >=1.0
+    - pandas >=2.1.4
     - requests >=2.3.0
-    - python >={{ python_min }}
 
 test:
   requires:
