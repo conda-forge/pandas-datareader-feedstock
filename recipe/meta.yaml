@@ -1,8 +1,5 @@
 {% set version = "0.11.0" %}
 
-context:
-  python_min: "3.11"
-  
 package:
   name: pandas-datareader
   version: {{ version }}
@@ -14,9 +11,9 @@ source:
 build:
   number: 0
   noarch: python
-  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-
-
+  script: {{ PYTHON }} -m pip install . -vv
+  skip: true  # [py<310]
+  
 requirements:
   host:
     - python ${{ python_min }}.*
