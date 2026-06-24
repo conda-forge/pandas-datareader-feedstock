@@ -1,4 +1,4 @@
-{% set version = "0.11.0" %}
+{% set version = "0.11.1" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/p/pandas-datareader/pandas_datareader-{{ version }}.tar.gz
-  sha256: 6c86360127f0b4c4451495574e162da058cf6154a185503310df70c417e0e266
+  sha256: e1eadb6d2ccaa4b7a876a1c81b6ff0307fa7a08b56f7799862a50207c2e65a05
 
 build:
   number: 0
