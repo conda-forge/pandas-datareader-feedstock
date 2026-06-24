@@ -1,5 +1,8 @@
 {% set version = "0.11.0" %}
 
+context:
+  python_min: "3.11"
+  
 package:
   name: pandas-datareader
   version: {{ version }}
@@ -16,10 +19,10 @@ build:
 
 requirements:
   host:
-    - python >=3.11
+    - python ${{ python_min }}.*
     - pip
   run:
-    - python >=3.11
+    - python >=${{ python_min }}
     - lxml
     - pandas >=2.1.4
     - requests >=2.3.0
